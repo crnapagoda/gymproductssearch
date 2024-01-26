@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Page</title>
+  <title>Cenovnik</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #222; /* Dark background color */
+      color: #eee; /* Light text color */
     }
     .container {
       max-width: 800px;
@@ -19,12 +21,17 @@
       width: calc(100% - 20px); /* Subtract padding from container */
       padding: 10px;
       margin-bottom: 20px;
+      background-color: #444; /* Darker search box background color */
+      color: #eee; /* Light text color */
+      border: none;
+      border-radius: 5px;
     }
     .product {
-      border: 1px solid #ccc;
+      border: 1px solid #444; /* Darker border color */
       padding: 10px;
       margin-bottom: 10px;
       display: flex;
+      background-color: #333; /* Darker background color */
     }
     .product img {
       max-width: 100px;
@@ -33,14 +40,27 @@
     }
     .product-details {
       overflow: hidden;
+      flex-grow: 1;
+    }
+    .product-price {
+      font-weight: bold;
+      /* text-align: right; */
+      color: #ff0; /* Yellowish price color */
     }
     .product-title {
       font-weight: bold;
     }
+    #title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
   </style>
 </head>
 <body>
   <div class="container">
+    <div id="title">Cenovnik</div>
     <input type="text" id="search" placeholder="Pretrazi proizvode...">
     <div id="products">
       <div class="product">
