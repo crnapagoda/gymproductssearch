@@ -3,91 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Cenovnik</title>
 </head>
 <body>
   <div class="container">
     <div id="title">Cenovnik</div>
     <input type="text" id="search" placeholder="Pretrazi proizvode...">
+    <select id="sort" class="filter-button">
+      <option value="default">Sortiraj po</option>
+      <option value="price-asc">Cena: Rastuće</option>
+      <option value="price-desc">Cena: Opadajuće</option>
+    </select>
     <div id="products">
-      <div class="product">
-        <img src="images/creatine.jpg" alt="Product 1">
-        <div class="product-details">
-          <div class="product-title">Kreatin</div>
-          <div class="product-price">2900 RSD</div>
-          <div class="product-description">Kreatin Monohidrat</div>
-        </div>
+      <!-- Proizvodi ovde -->
+    </div>
+  </div>
+  
       </div>
-      <div class="product">
-        <img src="images/protein1kg.jpg" alt="Product 2">
-        <div class="product-details">
-          <div class="product-title">Protein 1kg</div>
-          <div class="product-price">2950 RSD</div>
-          <div class="product-description">Whey protein 100%</div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="images/protein500g.jpg" alt="Product 3">
-        <div class="product-details">
-          <div class="product-title">Protein 500g</div>
-          <div class="product-price">1700 RSD</div>  
-          <div class="product-description">Whey protein </div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="images/megaeaa.png" alt="Product 4">
-        <div class="product-details">
-          <div class="product-title">Mega EAA</div>
-          <div class="product-price">2600 RSD</div>  
-          <div class="product-description">Mega EAA </div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="images/vitaminc.png" alt="Product 5">
-        <div class="product-details">
-          <div class="product-title">Vitamin C</div>
-          <div class="product-price">1100 RSD</div>  
-          <div class="product-description">Vitamin</div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="images/chocopro.png" alt="Product 6">
-        <div class="product-details">
-          <div class="product-title">Choco Pro Bar</div>
-          <div class="product-price">250 RSD</div>  
-          <div class="product-description">Cokoladica</div>
-        </div>
-      </div>
-      <div class="product">
-        <img src="images/creatinemax.jpg" alt="Product 7">
-        <div class="product-details">
-          <div class="product-title">Kreatin Maximalium</div>
-          <div class="product-price">2600 RSD</div>  
-          <div class="product-description">Kreatin Monohidrat</div>
-        </div>
-      </div>
-      <!-- Dodaj proizvode ovde -->
+      <div class="container">
+        <div id="products">
+          <div class="product">
+            <img src="images/creatine.jpg" alt="Product 1">
+            <div class="product-details">
+              <div class="product-title">Kreatin</div>
+              <div class="product-price">2900 RSD</div>
+              <div class="product-description">Kreatin Monohidrat</div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/protein1kg.jpg" alt="Product 2">
+            <div class="product-details">
+              <div class="product-title">Protein 1kg</div>
+              <div class="product-price">2950 RSD</div>
+              <div class="product-description">Whey protein 100%</div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/protein500g.jpg" alt="Product 3">
+            <div class="product-details">
+              <div class="product-title">Protein 500g</div>
+              <div class="product-price">1700 RSD</div>  
+              <div class="product-description">Whey protein </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/megaeaa.png" alt="Product 4">
+            <div class="product-details">
+              <div class="product-title">Mega EAA</div>
+              <div class="product-price">2600 RSD</div>  
+              <div class="product-description">Mega EAA </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/vitaminc.png" alt="Product 5">
+            <div class="product-details">
+              <div class="product-title">Vitamin C</div>
+              <div class="product-price">1100 RSD</div>  
+              <div class="product-description">Vitamin</div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/chocopro.png" alt="Product 6">
+            <div class="product-details">
+              <div class="product-title">Choco Pro Bar</div>
+              <div class="product-price">250 RSD</div>  
+              <div class="product-description">Cokoladica</div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="images/creatinemax.jpg" alt="Product 7">
+            <div class="product-details">
+              <div class="product-title">Kreatin Maximalium</div>
+              <div class="product-price">2600 RSD</div>  
+              <div class="product-description">Kreatin Monohidrat</div>
+            </div>
     </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const searchInput = document.getElementById('search');
+      const sortSelect = document.getElementById('sort');
       const products = document.querySelectorAll('.product');
-
+  
       searchInput.addEventListener('keyup', function (event) {
         const searchText = event.target.value.toLowerCase();
-
+  
         products.forEach(function (product) {
           const title = product.querySelector('.product-title').textContent.toLowerCase();
           const description = product.querySelector('.product-description').textContent.toLowerCase();
-
+  
           if (title.includes(searchText) || description.includes(searchText)) {
             product.style.display = 'flex'; 
           } else {
             product.style.display = 'none';
           }
+        });
+      });
+  
+      sortSelect.addEventListener('change', function (event) {
+        const sortValue = event.target.value;
+        const productsArray = Array.from(products);
+  
+        productsArray.sort(function (a, b) {
+          const priceA = parseInt(a.querySelector('.product-price').textContent.replace(' RSD', ''));
+          const priceB = parseInt(b.querySelector('.product-price').textContent.replace(' RSD', ''));
+  
+          if (sortValue === 'price-asc') {
+            return priceA - priceB;
+          } else if (sortValue === 'price-desc') {
+            return priceB - priceA;
+          } else {
+            return 0;
+          }
+        });
+  
+        const productsContainer = document.getElementById('products');
+        productsContainer.innerHTML = '';
+        productsArray.forEach(function (product) {
+          productsContainer.appendChild(product);
         });
       });
     });
