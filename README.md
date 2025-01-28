@@ -16,9 +16,3 @@ Ovaj projekat je jednostavna web aplikacija za pretragu i filtriranje proizvoda 
 - **Filtriranje proizvoda**: Korisnici mogu filtrirati proizvode po kategoriji i cenovnom rangu.
 - **Sortiranje proizvoda**: Korisnici mogu sortirati proizvode po ceni (rastuće ili opadajuće).
 - **Animacije**: Proizvodi imaju animaciju prilikom prelaska miša preko njih.
-
-## Kako koristiti
-
-1. Klonirajte repozitorijum:
-   ```sh
-   git clone https://github.com/crnapagoda/gymproductssearch/
