@@ -473,8 +473,22 @@ document.addEventListener('DOMContentLoaded', async function () {
     productImageCapture.click();
   });
 
+  productImageCapture.addEventListener('change', function () {
+    const file = productImageCapture.files[0];
+    if (file) {
+      document.getElementById('productImage').files = productImageCapture.files;
+    }
+  });
+
   editCaptureButton.addEventListener('click', function () {
     editProductImageCapture.click();
+  });
+
+  editProductImageCapture.addEventListener('change', function () {
+    const file = editProductImageCapture.files[0];
+    if (file) {
+      document.getElementById('editProductImage').files = editProductImageCapture.files;
+    }
   });
 
   await checkAuth();
