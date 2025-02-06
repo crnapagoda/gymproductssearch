@@ -69,7 +69,8 @@ body {
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
 }
 
-.filter-button {
+.filter-button,
+#addProductButton {
   padding: 0.8rem 1.5rem;
   background: linear-gradient(45deg, #00b4d8, #00ff88);
   border: none;
@@ -79,9 +80,12 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   margin: 0.5rem;
   cursor: pointer;
+  height: 48px; /* Set a consistent height */
+  /* line-height: 1.5; /* Ensure text is vertically centered */
 }
 
-.filter-button:hover {
+.filter-button:hover,
+#addProductButton:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
 }
