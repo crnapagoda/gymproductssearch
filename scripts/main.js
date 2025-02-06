@@ -1,5 +1,6 @@
+require('dotenv').config();
 document.addEventListener('DOMContentLoaded', async function () {
-  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseUrl = 'https://cbpmcmajjwlejlmqpnra.supabase.co';
   const supabaseKey = process.env.SUPABASE_KEY;
   const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
