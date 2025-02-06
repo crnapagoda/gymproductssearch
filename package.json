@@ -1,5 +1,14 @@
 {
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "@supabase/supabase-js": "^1.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   }
 }

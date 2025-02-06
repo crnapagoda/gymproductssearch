@@ -1,8 +1,13 @@
-require('dotenv').config();
+import { createClient } from '@supabase/supabase-js';
+
 document.addEventListener('DOMContentLoaded', async function () {
   const supabaseUrl = 'https://cbpmcmajjwlejlmqpnra.supabase.co';
   const supabaseKey = process.env.SUPABASE_KEY;
-  const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+  if (!supabaseKey) {
+    console.error('Supabase key is missing');
+    return;
+  }
+  const supabase = createClient(supabaseUrl, supabaseKey);
 
   const searchInput = document.getElementById('search');
   const categorySelect = document.getElementById('category');
