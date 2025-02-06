@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   const closeModalButtons = document.querySelectorAll('.close');
   const loginButton = document.getElementById('loginButton');
   const logoutButton = document.getElementById('logoutButton');
+  const captureButton = document.getElementById('captureButton');
+  const productImageCapture = document.getElementById('productImageCapture');
+  const editCaptureButton = document.getElementById('editCaptureButton');
+  const editProductImageCapture = document.getElementById('editProductImageCapture');
 
   let user = null;
 
@@ -456,6 +460,14 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     editProductModal.style.display = 'none';
     await fetchProducts();
+  });
+
+  captureButton.addEventListener('click', function () {
+    productImageCapture.click();
+  });
+
+  editCaptureButton.addEventListener('click', function () {
+    editProductImageCapture.click();
   });
 
   await checkAuth();

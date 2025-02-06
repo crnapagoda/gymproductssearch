@@ -57,7 +57,10 @@
             <option value="snacks">Užina</option>
           </select>
           <label for="productImage">Slika:</label>
-          <input type="file" id="productImage" name="image" accept="image/*" capture="environment" required>
+          <input type="file" id="productImage" name="image" accept="image/*" required>
+          <p>ili</p>
+          <button type="button" id="captureButton" class="capture-button">Fotografiši</button>
+          <input type="file" id="productImageCapture" name="image" accept="image/*" capture="environment" style="display: none;">
           <button type="submit" class="filter-button">Dodaj</button>
         </form>
       </div>
@@ -82,7 +85,10 @@
             <option value="snacks">Užina</option>
           </select>
           <label for="editProductImage">Slika:</label>
-          <input type="file" id="editProductImage" name="image" accept="image/*" capture="environment">
+          <input type="file" id="editProductImage" name="image" accept="image/*">
+          <p>ili</p>
+          <button type="button" id="editCaptureButton" class="capture-button">Fotografiši</button>
+          <input type="file" id="editProductImageCapture" name="image" accept="image/*" capture="environment" style="display: none;">
           <button type="submit" class="filter-button">Izmeni</button>
         </form>
       </div>

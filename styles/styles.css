@@ -73,6 +73,27 @@ body {
   box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
 }
 
+.capture-button {
+  padding: 0.5rem 1rem;
+  
+  border: 1px solid gray;
+  background:transparent;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  width: 100%;
+  max-width: 680px;
+  display: block;
+}
+
+.capture-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 233, 233, 0.3);
+}
+
 #filters-container {
   display: flex;
   justify-content: space-between;
