@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const description = document.getElementById('productDescription').value;
     const price = document.getElementById('productPrice').value;
     const category = document.getElementById('productCategory').value;
-    const imageFile = document.getElementById('productImage').files[0];
+    const imageFile = document.getElementById('productImage').files[0] || document.getElementById('productImageCapture').files[0];
 
     if (!imageFile) {
       alert('Please select an image file.');
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const description = document.getElementById('editProductDescription').value;
     const price = document.getElementById('editProductPrice').value;
     const category = document.getElementById('editProductCategory').value;
-    const imageFile = document.getElementById('editProductImage').files[0];
+    const imageFile = document.getElementById('editProductImage').files[0] || document.getElementById('editProductImageCapture').files[0];
 
     let imageUrl = null;
     if (imageFile) {
