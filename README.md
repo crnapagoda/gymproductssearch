@@ -1,77 +1,77 @@
 # Gym Product Search
 
-Ovaj projekat je jednostavna web aplikacija za pretragu i filtriranje proizvoda u teretani. Korisnici mogu pretraživati proizvode po nazivu, kategoriji i cenovnom rangu, kao i sortirati proizvode po ceni.
+This project is a simple web application for searching and filtering gym products. Users can search for products by name, category, and price range, as well as sort products by price.
 
-## Struktura projekta
+## Project Structure
 
-- `index.html`: Glavna HTML datoteka koja sadrži strukturu stranice i proizvode.
+- `index.html`: The main HTML file containing the page structure and products.
 - `styles/`
-  - `styles.css`: CSS datoteka koja sadrži stilove za stranicu.
+  - `styles.css`: CSS file containing the styles for the page.
 - `scripts/`
-  - `main.js`: JavaScript datoteka koja sadrži logiku aplikacije.
-- `images/`: Folder koji sadrži slike proizvoda.
-- `README.md`: Ovaj fajl sa informacijama o projektu.
-- `.env`: Datoteka sa environment varijablama (nije uključena u repozitorijum).
+  - `main.js`: JavaScript file containing the application logic.
+- `images/`: Folder containing product images.
+- `README.md`: This file with project information.
+- `.env`: File with environment variables (not included in the repository).
 
-## Funkcionalnosti
+## Features
 
-- **Pretraga proizvoda**: Korisnici mogu pretraživati proizvode po nazivu ili opisu.
-- **Filtriranje proizvoda**: Korisnici mogu filtrirati proizvode po kategoriji i cenovnom rangu.
-- **Sortiranje proizvoda**: Korisnici mogu sortirati proizvode po ceni (rastuće ili opadajuće).
-- **Dodavanje proizvoda**: Administratori mogu dodavati nove proizvode.
-- **Izmena proizvoda**: Administratori mogu izmeniti postojeće proizvode.
-- **Brisanje proizvoda**: Administratori mogu brisati proizvode.
-- **Animacije**: Proizvodi imaju animaciju prilikom prelaska miša preko njih.
+- **Product Search**: Users can search for products by name or description.
+- **Product Filtering**: Users can filter products by category and price range.
+- **Product Sorting**: Users can sort products by price (ascending or descending).
+- **Add Product**: Administrators can add new products.
+- **Edit Product**: Administrators can edit existing products.
+- **Delete Product**: Administrators can delete products.
+- **Animations**: Products have animations when hovered over.
 
-## Tehnologije
+## Technologies
 
-- **HTML**: Za strukturu stranice.
-- **CSS**: Za stilizaciju stranice.
-- **JavaScript**: Za logiku aplikacije.
-- **Supabase**: Za backend usluge (autentifikacija, baza podataka, skladištenje).
-- **Vite**: Za razvoj i build alat.
+- **HTML**: For the page structure.
+- **CSS**: For styling the page.
+- **JavaScript**: For the application logic.
+- **Supabase**: For backend services (authentication, database, storage).
+- **Vite**: For development and build tools.
 
-## Kako koristiti
+## How to Use
 
-1. Klonirajte repozitorijum:
+1. Clone the repository:
    ```sh
    git clone https://github.com/crnapagoda/gymproductssearch.git
    cd gymproductssearch
    ```
 
-2. Instalirajte zavisnosti:
+2. Install dependencies:
    ```sh
    npm install
    ```
 
-3. Kreirajte `.env` datoteku i dodajte vaš Supabase ključ:
+3. Create a `.env` file and add your Supabase key:
    ```sh
    SUPABASE_KEY=your_supabase_key
    ```
 
-4. Pokrenite razvojni server:
+4. Start the development server:
    ```sh
    npm run dev
    ```
 
-5. Otvorite pretrazivac i idite na `http://localhost:3000`.
+5. Open your browser and go to `http://localhost:3000`.
 
 ## Deploy
 
-1. Izgradite projekat za produkciju:
+1. Build the project for production:
    ```sh
    npm run build
    ```
 
-2. Deploy-ujte na Vercel:
+2. Deploy to Vercel:
    ```sh
    vercel
    ```
 
-## Doprinos
+## Contributing
 
-Ako želite da doprinesete ovom projektu, slobodno otvorite pull request ili prijavite problem.
+If you want to contribute to this project, feel free to open a pull request or report an issue.
 
-## Licenca
+## License
 
-Ovaj projekat je licenciran pod MIT licencom.
+This project is licensed under the MIT License.
