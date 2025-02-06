@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', async function () {
   let user = null;
 
   async function checkAuth() {
-    const { data: { user: currentUser } } = await supabase.auth.getUser();
-    user = currentUser;
+    const { data: { session } } = await supabase.auth.getSession();
+    user = session?.user || null;
     updateUI();
   }
 
