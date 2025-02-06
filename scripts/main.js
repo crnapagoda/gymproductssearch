@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', async function () {
   let user = null;
 
   async function checkAuth() {
-    const { data: { session } } = await supabase.auth.getSession();
+    const { data: { session }, error } = await supabase.auth.getSession();
+    if (error) {
+      console.error('Error getting session:', error);
+      return;
+    }
     user = session?.user || null;
     updateUI();
   }
