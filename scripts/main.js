@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   function updateUI() {
+    const body = document.body;
     if (user) {
+      body.classList.add('logged-in');
       loginButton.style.display = 'none';
       settingsButton.style.display = 'block';
       addProductButton.style.display = 'block';
@@ -49,6 +51,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         button.style.display = 'block';
       });
     } else {
+      body.classList.remove('logged-in');
       loginButton.style.display = 'block';
       settingsButton.style.display = 'none';
       addProductButton.style.display = 'none';
