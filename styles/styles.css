@@ -51,7 +51,7 @@ body {
 }
 
 #search {
-  width: 680px;
+  width: 100%;
   max-width: 680px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -60,6 +60,7 @@ body {
   border-radius: 12px;
   transition: all 0.3s ease;
   font-size: 1rem;
+  box-sizing: border-box; /* Add this line */
 }
 
 #search:focus {
@@ -111,6 +112,9 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+  width: 100%; /* Add this line */
+  max-width: 680px; /* Add this line */
+  box-sizing: border-box; /* Add this line */
 }
 
 #filters-container select,
@@ -326,7 +330,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Responsive improvements */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     padding: 1rem;
   }
@@ -353,6 +357,12 @@ input:focus, textarea:focus, select:focus {
   
   .product img {
     margin: 0 0 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #search {
+    width: 100%;
   }
 }
 
