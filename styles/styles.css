@@ -80,8 +80,8 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
   margin: 0.5rem;
   cursor: pointer;
-  height: 48px; /* Set a consistent height */
-  /* line-height: 1.5; /* Ensure text is vertically centered */
+  height: 48px;
+  /* line-height: 1.5; */
 }
 
 .filter-button:hover,
