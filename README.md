@@ -2,6 +2,8 @@
 
 This project is a simple web application for searching and filtering gym products. Users can search for products by name, category, and price range, as well as sort products by price.
 
+![Gym Product Search Banner](images/bannergymproductsearch.JPG)
+
 ## Project Structure
 
 - `index.html`: The main HTML file containing the page structure and products.
