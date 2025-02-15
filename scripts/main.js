@@ -177,9 +177,15 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   async function fetchProducts() {
+    // Show loading indicator
+    document.querySelector('.loading-indicator').style.display = 'block';
+
     const { data: products, error } = await supabase
       .from('products')
       .select('*');
+
+    // Hide loading indicator
+    document.querySelector('.loading-indicator').style.display = 'none';
 
     if (error) {
       console.error('Error fetching products:', error);
@@ -197,6 +203,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       productElement.setAttribute('data-id', product.id);
       productElement.setAttribute('data-category', product.category);
       productElement.setAttribute('data-price', product.price);
+      productElement.setAttribute('data-created-at', product.created_at);
 
       productElement.innerHTML = `
         <img src="${product.image_url}" alt="${product.title}">
@@ -344,11 +351,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     productsArray.sort(function (a, b) {
       const priceA = parseInt(a.getAttribute('data-price'));
       const priceB = parseInt(b.getAttribute('data-price'));
+      const dateA = new Date(a.getAttribute('data-created-at'));
+      const dateB = new Date(b.getAttribute('data-created-at'));
 
       if (sortValue === 'price-asc') {
         return priceA - priceB;
       } else if (sortValue === 'price-desc') {
         return priceB - priceA;
+      } else if (sortValue === 'newest') {
+        return dateB - dateA;
       } else {
         return 0;
       }
